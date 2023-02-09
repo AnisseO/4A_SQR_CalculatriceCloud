@@ -11,24 +11,24 @@ def home():
 
 @app.route('/api/addition/<int:x1>/<int:x2>', methods=['POST'])
 def additionRoute(x1, x2):
-    id : generateID(x1,x2);
+    id = generateID(x1,x2);
     return id
 
 @app.route('/api/soustraction/<int:x1>/<int:x2>', methods=['POST'])
 def soustractionRoute(x1, x2):
-    id : generateID(x1,x2);
+    id = generateID(x1,x2);
     return id
 
 
 @app.route('/api/multiplication/<int:x1>/<int:x2>', methods=['POST'])
 def multiplicationRoute(x1, x2):
-    id : generateID(x1,x2);
+    id = generateID(x1, x2);
     return id
     
 
 @app.route('/api/division/<int:x1>/<int:x2>', methods=['POST'])
 def divisionRoute(x1, x2):
-    id : generateID(x1,x2);
+    id = generateID(x1,x2);
     return id
 
 @app.route('/api/resultat/<str:id>', methods=['GET'])
