@@ -4,25 +4,30 @@ from uuid import uuid4
 
 app = Flask(__name__)
 
-def generateID(self, x1, x2) -> str:
-        uniqueID = str(uuid4()) 
+def generateID(x1, x2) -> uuid4:
+        uniqueID = uuid4()
         return uniqueID
     
-def addition(self, x1, x2) -> int:
+def addition(x1, x2) -> int:
         resultat = x1 + x2
         return resultat
     
-def soustraction(self, x1, x2) -> int:
+def soustraction( x1, x2) -> int:
         resultat = x1 - x2
         return resultat
     
-def multiplication(self, x1, x2) -> int:
+def multiplication( x1, x2) -> int:
         resultat = x1 * x2
         return resultat
     
-def division(self, x1, x2) -> float:
+def division(x1, x2) -> float:
         resultat = x1 / x2
         return resultat
-    
-        
+
+def stringID() -> str:
+        uniqueID = str(uuid4()) 
+        return uniqueID   
          
+def getResultByID(id: str)-> float:
+        
+        return 
