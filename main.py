@@ -15,18 +15,18 @@ def home():
 def additionRoute():
     x1 = int(request.args.get('x1'))
     x2 = int(request.args.get('x2'))
-    id = generateID(x1, x2)
+    id = generateID()
     res = addition(x1, x2)
-    div = Calcul(id, x1, x2, res)
-    return id
+    add = Calcul(id, x1, x2, res)
+    return stringID(id)
 
 @app.route('/api/soustraction', methods=['POST'])
 def soustractionRoute():
     x1 = int(request.args.get('x1'))
     x2 = int(request.args.get('x2'))
-    id = generateID(x1, x2)
+    id = generateID()
     res = soustraction(x1, x2)
-    div = Calcul(id, x1, x2, res)
+    sous = Calcul(id, x1, x2, res)
     return id
 
 
@@ -34,9 +34,9 @@ def soustractionRoute():
 def multiplicationRoute():
     x1 = int(request.args.get('x1'))
     x2 = int(request.args.get('x2'))
-    id = generateID(x1, x2)
+    id = generateID()
     res = multiplication(x1, x2)
-    div = Calcul(id, x1, x2, res)
+    mult = Calcul(id, x1, x2, res)
     return id
     
 
@@ -44,15 +44,12 @@ def multiplicationRoute():
 def divisionRoute():
     x1 = int(request.args.get('x1'))
     x2 = int(request.args.get('x2'))
-    id = generateID(x1, x2)
+    id = generateID()
     res = division(x1, x2)
     div = Calcul(id, x1, x2, res)
-    response = "<li>" + "Votre id :" + id + "</li>" 
-    return response
+     
+    return id
 
-@app.route('/api/resultat/<str:id>', methods=['GET'])
-def getResult():
-    return
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
